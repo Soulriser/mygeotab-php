@@ -206,7 +206,7 @@ class API
                 $successCallback($result["result"] ?? null);
             } else {
                 // let the caller decode the response and inspect its properties.
-                // returned results are accessible as: $response->getBody()['results']
+                // returned results are accessible as: $response->getBody()['result']
                 return $response;
             }
         }
