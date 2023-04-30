@@ -205,7 +205,9 @@ class API
             if (is_callable($successCallback)) {
                 $successCallback($result["result"] ?? null);
             } else {
-                return $result["result"] ?? null;
+                // let the caller decode the response and inspect its properties.
+                // returned results are accessible as: $response->getBody()['results']
+                return $response;
             }
         }
     }
